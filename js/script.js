@@ -2,13 +2,14 @@ const allBtns = document.getElementsByClassName("add-btn");
 for (const button of allBtns) {
   button.addEventListener("click", () => {
     const productImage =
-      button.parentNode.parentNode.parentNode.children[0].children[0].src;
+      button.parentNode.parentNode.children[0].children[0].src;
+     
 
-    const productTitle = button.parentNode.parentNode.children[1].innerText;
-
+    const productTitle = button.parentNode.parentNode.children[1].children[1].innerText;
+    
     const productPrice =
-      button.parentNode.parentNode.children[2].children[0].innerText;
-    console.log(productPrice);
+    button.parentNode.parentNode.children[1].children[2].children[0].innerText;
+    // console.log(productPrice)
 
     const showSection = document.getElementById("Purchase-list");
     const div = document.createElement("div");
